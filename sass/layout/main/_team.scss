@@ -1,0 +1,91 @@
+.team {
+  background-color: #f5f4fa;
+}
+
+.team-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.team-list__img {
+  width: 100%;
+}
+
+.team-list__card {
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  @media screen and (min-width: 768px) {
+    max-width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: calc((100% - 90px) / 4);
+  }
+}
+
+.card {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.card__name {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+
+.card__profession {
+  margin-top: 10px;
+  margin-bottom: 0;
+
+  line-height: 19px;
+  letter-spacing: 0.03em;
+}
+
+.card-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.card-list__link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+  }
+}
+
+li.card-list__items + .card-list__items {
+  margin-left: 10px;
+}
+
+.card-list__svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card-list__link:hover &,
+  .card-list__link:focus & {
+    fill: #ffffff;
+  }
+}

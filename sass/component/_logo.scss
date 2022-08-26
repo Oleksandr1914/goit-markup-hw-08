@@ -1,0 +1,22 @@
+@mixin logo-func($color, $family, $size, $height, $decoration) {
+  color: $color;
+  font-family: $family;
+  font-size: $size;
+  line-height: $height;
+  text-decoration: $decoration;
+}
+
+.logo {
+  @include logo-func(#2196f3, $logoFont, 24px, 1.16, none);
+  @media screen and (min-width: 1200px) {
+    @include logo-func(#2196f3, $logoFont, 26px, 1.19, none);
+  }
+}
+
+.logo-text {
+  color: #000000;
+}
+
+.footer-logo-text {
+  color: var(--tertiary-color);
+}
