@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header>
-      <div class="container header-block">
-        <nav class="nav">
+    <header class="header">
+      <div class="container header__container">
+        <nav class="header__left">
           <a href="#" class="logo">Web<span class="logo-text">Studio</span></a>
           <ul class="nav-list">
             <li class="nav-list__item items">
@@ -455,10 +455,11 @@
                 class="footer-form-input"
                 id="user_email"
               />
-              <button type="submit" class="footer-form-btn">Підписатися</button>
-              <svg class="footer-btn-svg" width="24" height="24">
-                <use href="./images/sprite.svg#icon-send"></use>
-              </svg>
+              <button type="submit" class="footer-form-btn">
+                Підписатися<svg class="footer-btn-svg" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-send"></use>
+                </svg>
+              </button>
             </div>
           </form>
         </div>
@@ -497,7 +498,6 @@
             >Коментар
             <textarea
               name="coment"
-              rows="5"
               placeholder="Введіть текст"
               class="modal-labels__textarea"
             ></textarea>

@@ -105,12 +105,29 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 
 .footer-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-flex {
+    justify-content: flex-start;
+  }
 }
 
 .backdrop {
@@ -120,6 +137,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -136,8 +155,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  width: calc(100% - 30px);
+  max-width: 450px;
+  max-height: 609px;
   background-color: #ffffff;
   border-radius: 4px;
   transform: translate(-50%, -50%);
@@ -233,9 +253,8 @@ body {
 }
 
 .modal-labels-checkbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-flex;
+  flex-wrap: wrap;
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
@@ -322,12 +341,12 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.header-block {
+.header__container {
   display: flex;
   align-items: center;
 }
 
-.nav {
+.header__left {
   display: flex;
   align-items: center;
 }
@@ -526,7 +545,6 @@ li + .contact-list__item {
 
 .section.section--bottom {
   padding-top: 0px;
-  padding-bottom: 94px;
 }
 @media screen and (max-width: 1199px) {
   .section.section--bottom {
@@ -708,16 +726,34 @@ li.card-list__items + .card-list__items {
 .footer-cont {
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .footer-cont {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-cont {
+    text-align: start;
+    margin-bottom: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 
 .footer-all {
   margin-top: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-all {
+    width: 231px;
+  }
 }
 
 .address {
   color: var(--tertiary-color);
   font-style: normal;
   font-size: 14px;
-  line-height: 2;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -753,6 +789,21 @@ li.card-list__items + .card-list__items {
   text-align: center;
   margin-top: 60px;
   margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .social {
+    margin-left: 165px;
+    margin-top: 0;
+    margin-bottom: 102px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .social {
+    margin-left: 70px;
+    margin-bottom: 0;
+    padding-top: 72px;
+    padding-bottom: 100px;
+  }
 }
 
 .social-title {
@@ -795,9 +846,27 @@ li.card-list__items + .card-list__items {
   max-width: 450px;
   margin-top: 60px;
 }
+@media screen and (min-width: 768px) {
+  .footer-conteiner-form {
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-conteiner-form {
+    margin-left: 93px;
+    max-width: 570px;
+    padding-top: 72px;
+    padding-bottom: 94px;
+  }
+}
 
 .footer-form {
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    text-align: start;
+  }
 }
 
 .footer-form-label {
@@ -815,7 +884,11 @@ li.card-list__items + .card-list__items {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+}
+@media screen and (min-width: 1200px) {
+  .footer-container-input {
+    flex-direction: row;
+  }
 }
 
 .footer-form-input {
@@ -829,12 +902,20 @@ li.card-list__items + .card-list__items {
   border-radius: 4px;
   color: #ffffff;
 }
+@media screen and (min-width: 1200px) {
+  .footer-form-input {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
 
 .footer-form-btn {
   padding: 10px 62px 10px 28px;
   display: flex;
   align-items: center;
   text-align: center;
+  position: relative;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
