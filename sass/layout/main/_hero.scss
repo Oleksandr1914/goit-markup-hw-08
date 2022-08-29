@@ -8,25 +8,74 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/hero-back.jpg");
-  background-size: cover;
+    url("../images/mob/studio/header-mob.jpg");
+  background-size: 100vw 100%;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/mob/studio/header-mob@2x.jpg");
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/tablet/studio/header-tablet.jpg");
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/tablet/studio/header-tablet@2x.jpg");
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/desktop/studio/header-desktop.jpg");
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/desktop/studio/header-desktop@2x.jpg");
+    }
+  }
 }
 
 .main-title {
   font-weight: 900;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
   color: #ffffff;
+
+  @media screen and (min-width: 480px) {
+    font-size: 26px;
+  }
   @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: 1.36;
@@ -36,7 +85,7 @@
 }
 
 .btn {
-  padding: 10px 32px;
+  padding: 8px 30px;
   margin-top: 30px;
   margin-bottom: 0;
   border: 1px solid transparent;
@@ -46,9 +95,13 @@
   background-color: #2196f3;
 
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+  @media screen and (min-width: 480px) {
+    padding: 10px 32px;
+    font-size: 16px;
+  }
 }

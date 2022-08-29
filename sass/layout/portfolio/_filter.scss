@@ -1,17 +1,23 @@
 .filter {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   display: flex;
-  justify-content: center;
-}
-
-li + .filter__iteam {
-  margin-left: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
+  @media screen and (max-width: 767px) {
+    max-width: 340px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__btn {
   border: 1px solid transparent;
   border-radius: 4px;
-  padding: 5px 21px;
+  padding: 6px 22px;
   color: var(--secondary-color);
   background-color: var(--background-color-btn);
   font-weight: 500;
@@ -28,5 +34,15 @@ li + .filter__iteam {
   &:focus {
     color: var(--tertiary-color);
     background-color: var(--hover-color);
+  }
+}
+
+.btn-left {
+  padding: 6px 25px;
+}
+
+.filter__btn--top {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
   }
 }

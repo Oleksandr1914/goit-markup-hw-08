@@ -1,11 +1,26 @@
 .portfolio-list {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
+.portfolio-list__item {
+  width: 100%;
+  max-width: 450px;
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 370px;
+  }
+}
+
 .portfolio-list__link {
-  display: block;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -16,6 +31,10 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
     outline: 0;
   }
+}
+
+.portfolio-list__img {
+  width: 100%;
 }
 
 .portfolio-card {
@@ -53,6 +72,7 @@
 }
 
 .portfolio-work {
+  flex-grow: 1;
   padding: 20px 24px;
   align-items: center;
   border-top: 0;

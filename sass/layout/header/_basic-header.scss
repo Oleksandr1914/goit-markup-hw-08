@@ -6,3 +6,16 @@
   display: flex;
   align-items: center;
 }
+
+.header__menu--svg {
+  margin-left: auto;
+  fill: #000000;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}

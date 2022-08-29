@@ -1,16 +1,30 @@
 .contact-list {
-  display: flex;
+  display: none;
   margin-left: auto;
-}
 
-li + .contact-list__item {
-  margin-left: 50px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .contact-list__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.contact-list__item:not(:last-child) {
+  padding-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+    margin-right: 30px;
+  }
 }
 
 .contact-list__icon {

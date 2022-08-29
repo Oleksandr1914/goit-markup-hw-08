@@ -1,0 +1,109 @@
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 0 48px 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  z-index: 3;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-menu__btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-color: transparent;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: var(--hover-color);
+    outline: transparent;
+  }
+}
+
+.menu-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.menu-nav__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #212121;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+    outline: transparent;
+  }
+}
+
+.menu-active {
+  color: var(--hover-color);
+}
+
+.menu-link {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-contact__tel {
+  padding-bottom: 32px;
+  font-size: 30px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.menu-contact__email {
+  margin-bottom: 64px;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+// soc
+
+.burger-menu__soc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.burger-menu__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+}
+
+// .burger-menu__item:not(:first-child) {
+//   padding-left: 10px;
+// }
+
+.burger-menu__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}

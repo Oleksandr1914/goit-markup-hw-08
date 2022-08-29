@@ -1,11 +1,22 @@
 .header__left {
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 
 .nav-list {
-  display: flex;
-  margin-left: 93px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: 87px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 92px;
+  }
 }
 
 .nav-list__item + .items {
