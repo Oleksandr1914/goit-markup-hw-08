@@ -379,6 +379,10 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
+.no-border {
+  border-bottom: 0px;
+}
+
 .header__container {
   display: flex;
   align-items: center;
@@ -772,7 +776,16 @@ body {
 }
 @media screen and (max-width: 1199px) {
   .section.section--bottom {
-    display: none;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
   }
 }
 
@@ -1278,10 +1291,15 @@ li.card-list__items + .card-list__items {
 }
 
 .portfolio-card__text {
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.6;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+@media screen and (min-width: 480px) {
+  .portfolio-card__text {
+    font-size: 18px;
+  }
 }
 
 .portfolio-work {
